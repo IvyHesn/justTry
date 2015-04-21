@@ -1,52 +1,55 @@
+#!/usr/bin/env python
+# -*- coding: gbk -*-
 from lxml import etree
 
+
 def create_tree(file_path):
-	tree=etree.parse(file_path)
-	return tree
-tree=create_tree('items.xml')
-root=tree.getroot()
-def find_nodelist(tree,Xpath):
-	'''
-	è¿”å›çš„æ˜¯ç¬¦åˆæ¡ä»¶çš„åˆ—è¡¨
-	'''
-	root=tree.getroot()
-	nodelist=root.findall(Xpath)
-	return nodelist
+    tree = etree.parse(file_path)
+    return tree
 
-def find_attrib_value(node,name):
-	'''
-	ä½¿ç”¨find_nodelist()åï¼Œç´¢å¼•éœ€è¦çš„ä¸€é¡¹ï¼ŒæŸ¥æ‰¾æŒ‡å®šçš„å±æ€§çš„å€¼
-	'''
-	value=node.attrib[name]
-	return value
+tree = create_tree('items.xml')
+root = tree.getroot()
 
-#nodelist=find_nodelist(tree,'./levels[@id="0"]/level[@id="0"]/createItems/createElement[@elementId="0"]')
-nodelist=find_nodelist(tree,'./item[@id="1"]/award')
-node=nodelist[0]
-node.set('step','5')
-value=find_attrib_value(nodelist[0],'step')
-print (value)
 
-def change_attrib_value(node,key,value):
-	'''
-	ä¿®æ”¹å±æ€§çš„å€¼
-	'''
-	node.set(key,value)
+def find_nodelist(tree, Xpath):
+    '''
+    ·µ»ØµÄÊÇ·ûºÏÌõ¼şµÄÁĞ±í
+    '''
+    root = tree.getroot()
+    nodelist = root.findall(Xpath)
+    return nodelist
+
+
+def find_attrib_value(node, name):
+    '''Ê¹ÓÃfind_nodelist()ºó£¬Ë÷ÒıĞèÒªµÄÒ»Ïî£¬²éÕÒÖ¸¶¨µÄÊôĞÔµÄÖµ'''
+    value = node.attrib[name]
+    return value
+
+# nodelist=find_nodelist(tree,'./levels[@id="0"]/level[@id="0"]/createItems/createElement[@elementId="0"]')
+nodelist = find_nodelist(tree, './item[@id="1"]/award')
+node = nodelist[0]
+node.set('step', '5')
+value = find_attrib_value(nodelist[0], 'step')
+print(value)
+
+
+def change_attrib_value(node, key, value):
+    '''
+    ĞŞ¸ÄÊôĞÔµÄÖµ
+    '''
+    node.set(key, value)
+
 
 def write_xml(tree, out_path):
-    '''å°†xmlæ–‡ä»¶å†™å‡º
-       tree: xmlæ ‘
-       out_path: å†™å‡ºè·¯å¾„'''
+    '''½«xmlÎÄ¼şĞ´³ö
+            tree: xmlÊ÷
+            out_path: Ğ´³öÂ·¾¶'''
     tree.write(out_path, encoding="utf-8", xml_declaration=True)
 
-#child2 = etree.SubElement(root, "child2") 
-#child3 = etree.SubElement(child2, "child3") 
+#child2= etree.SubElement(root, "child2")
+#child3 = etree.SubElement(child2, "child3")
 
 #print (etree.tostring(root,pretty_print=True))
 
 
-
-
-write_xml(tree,'items2.xml')
-
-
+write_xml(tree, 'items2.xml')
