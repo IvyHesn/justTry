@@ -1,3 +1,4 @@
+#coding:utf-8
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -6,3 +7,7 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse('Hello,hsn!')
+
+
+#def name(request, Article_name):
+#    return HttpResponse("You are looking at Article's %s" % (Article_name))
