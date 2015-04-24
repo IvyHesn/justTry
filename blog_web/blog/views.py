@@ -1,13 +1,13 @@
-#coding:utf-8
 from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
 
-'''
+
 def index(request):
     return HttpResponse('Hello,hsn!')
-'''
 
-#def name(request, Article_name):
-#    return HttpResponse("You are looking at Article's %s" % (Article_name))
+
+def article(request, n):
+    # return HttpResponse('the text')
+    return render(request, 'index.html')
