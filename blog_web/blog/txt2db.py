@@ -24,14 +24,12 @@ def main():
         if len(n) < 2:
             continue
         if n[1] == 'txt':
-            print(name)
             content = get_content(n[0])
-            Article.objects.create(name=n[0], content=content)
-            print('./Articles/' + name)
-            print('./Articles/Done/')
+            Article.objects.get_or_create(name=n[0], content=content)
             shutil.copyfile('./Articles/' + name, './Articles/Done/' + name)
             os.remove('./Articles/' + name)
+            print(name+'Done')
 
 if __name__ == "__main__":
     main()
-    print('Done!')
+    print('ALL Done!')

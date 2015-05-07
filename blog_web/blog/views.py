@@ -5,9 +5,14 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('Hello,hsn!')
-
-
-def article(request, n):
-    # return HttpResponse('the text')
     return render(request, 'index.html')
+
+
+def article(request, article_id):
+    # return HttpResponse('the text')
+    return render(request, 'article'+article_id+'.html')
+
+'''
+def article_index(request):
+    return render(request, 'index.html')
+'''

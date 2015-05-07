@@ -12,4 +12,5 @@ class ArticleAdmin(admin.ModelAdmin):
         ('Date information', {'field': ['pub_date'], 'classes':['collapse']}),
     ]
     list_display = ('name', 'pub_date')
+    list_filter = ['name'] #筛选
 admin.site.register(Article, ArticleAdmin)

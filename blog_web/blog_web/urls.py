@@ -11,7 +11,8 @@ urlpatterns = [
 ]
 '''
 urlpatterns = patterns('',
-                       url(r'^article/(\d+)/$', 'blog.views.article', name='article'),
-                       #url(r'^$', 'blog.views.index', name='index'),
-                       url(r'^admin/',include(admin.site.urls)),
+                       #url(r'^article_index/$', 'blog.views.article_index',name='article_index')
+                       url(r'^article/(\d+)/$','blog.views.article', name='article'),
+                       url(r'^$', 'blog.views.index', name='index'),
+                       url(r'^admin/', include(admin.site.urls)),
                        )
