@@ -1,0 +1,59 @@
+.title_list {
+    background-color: #999999;
+}
+
+.title {
+    font-size: 30px;
+    color: #0000FF;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+.web_list {}
+
+.table_td {
+    position: relative;
+    width: 325px;
+    height: 150px;
+    background-color: #00FF00;
+}
+
+.td_base {
+    position: relative;
+}
+
+.web_icon {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+}
+
+.image {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    width: 100px;
+    height: 100px;
+}
+
+.web_name {
+    position: absolute;
+    top: 25px;
+    left: 160px;
+    font-size: 24px;
+    font-style: bold;
+}
+
+.web_id {
+    position: absolute;
+    top: 50px;
+    left: 160px;
+    font-size: 20px;
+}
+
+.web_password {
+    position: absolute;
+    top: 75px;
+    left: 160px;
+    font-size: 20px;
+}

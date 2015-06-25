@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>账号查询</title>
+    <script>
+    function tab(title) {
+        if (title == 'tab-youxi') {
+            document.getElementById('tab-youxi').style.display = "block"
+            document.getElementById('tab-shenghuo').style.display = "none"
+        }
+        if (title == 'tab-shenghuo') {
+            document.getElementById('tab-youxi').style.display = "none"
+            document.getElementById('tab-shenghuo').style.display = "block"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div class="title_list">
+        <span class="title" onclick="tab('tab-youxi')">游戏</span>
+        <span class="title" onclick="tab('tab-shenghuo')">生活</span>
+    </div>
+    <div><span id="tab-youxi">1111</span></div>
+    <div><span id="tab-shenghuo" style="display:none">2222</span></div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>账号查询</title>
+    <script>
+    function tab(title) {
+        if (s == 'tab-youxi') {
+            document.getElementById('tab-youxi').style.display = "block"
+        }
+        if (s == 'tab-shenghuo') {
+            document.getElementById('tab-shenghuo').style.display = "block"
+        }
+
+    }
+    </script>
+</head>
+
+<body>
+    <span onclick="tab('tab-youxi')">游戏</span>
+    <span onclick="tab('tab-shenghuo')">生活</span>
+    <div><span id="tab-youxi"></span></div>
+    <div><span id="tab-shenghuo" style="display:none"></span></div>
+    <div class="web_list">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="table_td">
+                        <a target="_blank" href="http://www.zhihu.com/">
+                            <div class="td_base">
+                                <img src="./res/UI/base.png" />
+                            </div>
+                            <div class="web_icon">
+                                <img class="image" src="./res/Icon/zhihu.png" alt="知乎">
+                            </div>
+                            <div class="web_name">
+                                知乎
+                            </div>
+                            <div class="web_id">
+                                hsn
+                            </div>
+                            <div class="web_password">
+                                123
+                            </div>
+                        </a>
+                    </td>
+                    <td class="table_td">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+
+</html>
