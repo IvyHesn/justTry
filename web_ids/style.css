@@ -11,11 +11,11 @@
 
 .web_list {}
 
-.table_td {
+td {
     position: relative;
     width: 325px;
     height: 150px;
-    background-color: #00FF00;
+    background-color: #B3FF99;
 }
 
 .td_base {
@@ -44,14 +44,14 @@
     font-style: bold;
 }
 
-.web_id {
+.signin_name {
     position: absolute;
     top: 50px;
     left: 160px;
     font-size: 20px;
 }
 
-.web_password {
+.signin_password {
     position: absolute;
     top: 75px;
     left: 160px;
