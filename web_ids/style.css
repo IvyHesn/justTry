@@ -9,17 +9,11 @@
     margin-top: 100px;
 }
 
-.web_list {}
-
 td {
     position: relative;
     width: 325px;
     height: 150px;
-    background-color: #B3FF99;
-}
-
-.td_base {
-    position: relative;
+    background: url(./res/UI/base.png);
 }
 
 .web_icon {
@@ -30,8 +24,6 @@ td {
 
 .image {
     position: absolute;
-    left: 25px;
-    top: 25px;
     width: 100px;
     height: 100px;
 }
